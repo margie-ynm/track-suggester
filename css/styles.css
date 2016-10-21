@@ -6,6 +6,10 @@
   display: none;
 }
 
-.outputDesign {
+.outputJava {
+  display: none;
+}
+
+.outputOther {
   display: none;
 }
