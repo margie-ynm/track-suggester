@@ -1,3 +1,19 @@
+var quiz = function(language) {
+  debugger;
+  if (language < 1) {
+    return "#other";
+  } else if (language > 1 && language <= 5) {
+    return "#Csharp";
+  } else if (language > 5 && language < 10) {
+    return "#ruby";
+  } else if (language > 10) {
+    return "#java";
+  }
+
+}
+
+
+
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
@@ -11,21 +27,10 @@ $(document).ready(function() {
 
     var result = question1 + question2 + question3 + question4 + question5 + question6;
 
-      $(".outputOther").hide();
-      $(".outputCsharp").hide();
-      $(".outputRuby").hide();
-      $(".outputDesign").hide();
+    var language = quiz(result).toString();
 
-
-    if (result < 1) {
-      $(".outputOther").show();
-    } else if (result > 1 && result <= 5) {
-      $(".outputCsharp").show();
-    } else if (result > 5 && result < 10) {
-      $(".outputRuby").show();
-    } else if (result > 10) {
-      $(".outputJava").show();
-    }
+    $(".output").hide();
+    $(language).show();
 
   });
 });

@@ -1,15 +1,3 @@
-.outputCsharp {
-  display: none;
-}
-
-.outputRuby {
-  display: none;
-}
-
-.outputJava {
-  display: none;
-}
-
-.outputOther {
+.output {
   display: none;
 }
